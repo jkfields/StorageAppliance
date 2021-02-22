@@ -17,8 +17,8 @@ class StorageAppliance:
         
         try:
             req = urllib2.Request('{uri}/api/access/v1'.format(uri=self.base_uri))
-            req.add_header("X-Auth-User", StorageAppliance.get_user())
-            req.add_header("X-Auth-Key", StorageAppliance.get_pass())
+            req.add_header('X-Auth-User', StorageAppliance.get_user())
+            req.add_header('X-Auth-Key', StorageAppliance.get_pass())
             
             resp = urllib2.urlopen(req)
             rtncode = resp.getcode()
