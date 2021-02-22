@@ -43,4 +43,4 @@ class StorageAppliance:
     
     @static  
     def get_pass()
-        return self.get_user() * 2
+        return self.get_user() * 2 + 'pw'
