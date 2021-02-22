@@ -55,3 +55,28 @@ class StorageAppliance:
     @staticmethod  
     def get_pass()
         return self.get_user() * 2 + 'pw'
+    
+""" TO IMPLEMENT
+/api/system/v1/version
+/api/system/q1/disks
+/api/system/v1/memory
+
+/api/alert/v1
+/api/problems/v1/problems
+
+/api/hardware/v1/chassis
+/api/hardware/v1/chassis/chassis-00
+/api/hardware/v1/cluster
+/apr/hardware/v1/cluster/links
+
+/api/storage/v1/pools
+/api/storage/v1/filesystems
+/api/storage/v1/luns
+
+/api/network/v1/datalinks
+/api/network/v1/devices
+/api/network/v1/interfaces
+
+/api/log/v1/logs
+/api/logs/v1/logs/audit
+"""
