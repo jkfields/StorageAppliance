@@ -31,8 +31,19 @@ class StorageAppliance:
                 self.opener.addheaders(self.headers)
             else:
                 msg = 'Failed to create the session; authorization failed: code {code}'
-                raise SystemExit(msg.format(rtncode))
+                raise SystemExit(msg.format(code=rtncode))
             
+        except urllib2.HTTPError as err:
+            raise SystemExit(str(err))
+            
+    def get(self, href):
+        try:
+            req = urllib2.Request(self.base_uri + href)
+            resp = self.opener.open(req)
+            rtncode = resp.getcode():
+            body = json.loads(resp.read())
+            return json.dumps(body, sort_keys=True, indent=4)
+        
         except urllib2.HTTPError as err:
             raise SystemExit(str(err))
         
