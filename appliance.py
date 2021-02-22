@@ -48,10 +48,10 @@ class StorageAppliance:
             raise SystemExit(str(err))
         
     # the following are purely placeholders; implement based on your specific Cyber-security password policies
-    @static
+    @staticmethod
     def get_user():
         return "apiuser"
     
-    @static  
+    @staticmethod  
     def get_pass()
         return self.get_user() * 2 + 'pw'
